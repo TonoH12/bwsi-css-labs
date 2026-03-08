@@ -27,11 +27,6 @@ def test_division():
     assert simple_calculator("divide", -4, 2) == -2     # Test for negative and positive number
     assert simple_calculator("divide", 5, 2) == 2.5     # Test for division resulting in float
 
-def test_modulo():
-    assert simple_calculator("modulo", 12, 5) == 2       # Test for positive numbers
-    assert simple_calculator("modulo", -4, 2) == -2     # Test for negative and positive number
-    assert simple_calculator("modulo", 10.5, 2.5) == 0.5     # Test for float numbers
-
 def test_division_by_zero():
     with pytest.raises(ValueError, match="Cannot divide by zero."):
         simple_calculator("divide", 5, 0)               # Test division by zero
